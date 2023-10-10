@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid Recommendation Chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        #queryInput {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #submitQuery {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        #submitQuery:hover {
+            background-color: #2980b9;
+        }
+
+        #answerSection {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        #responseFrame {
+            width: 80%;
+            height: 400px;
+            border: none;
+        }
+
+        #responseHeading {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        /* Loader styles */
+        .loader-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .loader {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            animation: load 10s cubic-bezier(1, -0.01, 0.18, 0.72) infinite forwards;
+            background: linear-gradient(0deg, #ee0979, #ff6a00);
+        }
+
+        @keyframes load {
+            0% {
+                transform: scale(30%) rotate(0deg);
+            }
+
+            20% {
+                transform: scale(50%) rotate(190deg);
+            }
+
+            40% {
+                transform: scale(100%) rotate(280deg);
+            }
+
+            60% {
+                transform: scale(150%) rotate(470deg);
+            }
+
+            80% {
+                transform: scale(1000%) rotate(760deg);
+            }
+
+            100% {
+                transform: scale(1000%) rotate(960deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Main Content (iframe) -->
+    <h1>Maid Recommendation Chat</h1>
+    <p>Welcome to our Maid Recommendation Service! Ask any questions about our maids.</p>
+    <iframe id="responseFrame" frameBorder="0"
+        src="https://widget.writesonic.com/CDN/index.html?service-base-url=https://api.botsonic.ai&token=2e3e510c-0cc3-44d7-9b56-f2ee4d96c8b8&base-origin=https://bot.writesonic.com&instance-name=Botsonic&standalone=true">
+    </iframe>
+
+    <script>
+        // Simulate the loading of your main content
+        setTimeout(function () {
+            // Remove the loader
+            var loaderContainer = document.querySelector(".loader-container");
+            loaderContainer.style.display = "none";
+        }, 3000); // Simulating a 3-second loading time for demonstration purposes
+    </script>
+</body>
+
+</html>
