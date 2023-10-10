@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YellowSense Technologies</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="logo1.png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #000;
+        }
+
+        div {
+            color: #f6d071;
+            font-family: Monaco, monospace;
+            font-size: 24px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 45%;
+            left: 0;
+            animation: 120ms infinite normal glitch;
+        }
+
+        span {
+            animation: 1.5s infinite normal cursor;
+        }
+
+        ::-moz-selection {
+            background: #7021d2;
+            color: #fff;
+        }
+
+        ::selection {
+            background: #7021d2;
+            color: #fff;
+        }
+
+        @keyframes glitch {
+            0% {
+                opacity: 0;
+                left: 0;
+            }
+
+            40%,
+            80% {
+                opacity: 1;
+                left: -2px;
+            }
+        }
+
+        @keyframes cursor {
+            0% {
+                opacity: 0;
+                left: 0;
+            }
+
+            40% {
+                opacity: 0;
+                left: -2px;
+            }
+
+            80% {
+                opacity: 1;
+                left: -2px;
+            }
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div id="text">█ █ █ <span style="color:black">█ █ █ █ █ █ █ █ █ █ </span>31%
+        <br>&gt;We are Launching Soon &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>&gt; ©YellowSense Technologies <span
+            id="cursor">█</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+</body>
+
+</html>

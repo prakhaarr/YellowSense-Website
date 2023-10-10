@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YellowSense Technologies</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="logo1.png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+        }
+
+
+        /* .header {
+            padding: 40px;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <section class="header">
+            <div class="logo">
+                <img src="logo1.png" alt="" class="img1">
+                <img src="yellowsense.png" alt="" class="img2" id="img2">
+            </div>
+
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="#about us">About Us</a>
+                <a href="#faq">FAQ's</a>
+                <a href="#contact us">Contact</a>
+                <a href="industry5/index.html">Industry 5.0</a>
+                <a href="https://ai.yellowsense.in">Try our Gen AI</a>
+
+            </nav>
+
+
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </div>
+
+    <script>
+        function redirectToURL(url) {
+            window.location.href = url;
+        }
+        let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.header .navbar');
+        let links = navbar.querySelectorAll('a');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        };
+
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', () => {
+                menu.classList.remove('fa-times');
+                navbar.classList.remove('active');
+            });
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        };
+
+        let logo = document.getElementById("img2");
+        logo.addEventListener("click", function () {
+            redirectToURL("https://yellowsense.in");
+        });
+
+
+
+    </script>
+</body>
+
+</html>

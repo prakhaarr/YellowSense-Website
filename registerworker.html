@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YellowSense Technologies</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="logo1.png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800;900&display=swap');
+
+
+    .main-content {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .h1-title {
+        margin-top: 9rem;
+        color: #5f543a;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .form-container {
+        width: 48rem;
+        /* height: 25rem; */
+        padding: 2rem 4rem 2rem 4rem;
+        border-radius: 2.125rem;
+        border-right: 6px solid #5f543a;
+        border-bottom: 6px solid #5f543a;
+        border-top: 0.5px solid #5f543a;
+        border-left: 0.5px solid #5f543a;
+        background: #FFED9B;
+        box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.06);
+        margin-bottom: 2rem;
+    }
+
+    /* Add this CSS to your existing stylesheet or create a new one */
+
+    .form {
+        background-color: #f5f5f5;
+        /* padding: 2rem; */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* margin-top: 2rem; */
+        text-align: left;
+
+        /* Adjust text alignment */
+    }
+
+    .form h2 {
+        color: #A15942;
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .form-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .form-group {
+        flex: 0 0 48%;
+        /* Adjust the width as needed for responsiveness */
+        font-size: 1rem;
+
+    }
+
+    .form-group label {
+        display: flex;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    select,
+    textarea {
+        /* width: 90%; */
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        border-radius: 0.6rem;
+        border: 1px solid var(--neutral-300, #EFF0F6);
+        background: var(--neutral-100, #f2efe1);
+
+        /* Input/Default */
+        box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
+        outline: none;
+    }
+
+    button[type="submit"] {
+        background-color: #5f543a;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        display: block;
+        /* Change the display property to block */
+        margin: 0 auto;
+    }
+
+    video {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .video-wrapper {
+        border: 2px solid #000;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        /* Place the animation behind other content */
+    }
+
+
+
+
+    @media screen and (max-width: 768px) {
+
+        .form-row {
+            flex-direction: column;
+        }
+
+        .form-group {
+            flex: 0 0 100%;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+
+    /* Responsive styles for form container */
+    @media screen and (max-width: 768px) {
+        .form-container {
+            width: 100%;
+            height: auto;
+            margin-top: 1rem;
+            padding: 2rem 6rem;
+        }
+
+        label,
+        input[type="text"],
+        input[type="tel"],
+        select,
+        textarea {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+
+
+
+<body>
+    <div id="particles-js"></div>
+
+
+    <!-- <section class="header">
+        <div class="logo"><img src="logo1.png" alt="" class="img1">
+            <img src="yellowsense.png" alt="" class="img2">
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html">About Us</a>
+            <a href="index.html">FAQ's</a>
+            <a href="index.html">Contact</a>
+            <a href="https://ai.yellowsense.in">Try our Gen AI</a>
+
+        </nav>
+
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </section> -->
+
+    <div id="header"></div>
+
+    <div class="h1-title">
+        <h1>Register a Worker</h1>
+    </div>
+    <section class="main-content">
+
+
+        <form id="maid-booking-form" action="backend_api_url" method="POST">
+            <div class="form-container">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your number" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="select">Select--</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Services</label>
+                        <label for="sweeping">
+                            <input type="checkbox" id="sweeping" name="services[]" value="sweeping">
+                            Maid
+                        </label>
+
+                        <label for="mopping">
+                            <input type="checkbox" id="mopping" name="services[]" value="mopping">
+                            Cook
+                        </label>
+
+                        <label for="washroom Cleaning">
+                            <input type="checkbox" id="washroom Cleaning" name="services[]" value="washroom Cleaning">
+                            Nanny
+                        </label>
+
+
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <label for="mention">Additional Requirements</label>
+                        <textarea id="mention" name="mention" placeholder="Additional comments or requirements"
+                            rows="5"></textarea>
+                    </div> -->
+                </div>
+
+                <div class="form-row">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- <div class="footer" id="contact us">
+        <div class="fleft">
+            <div class="fimage">
+                <img src="logo1.png" alt="" class="i1">
+                <img src="yellowsense.png" alt="" class="i2">
+            </div>
+            <div class="firstline">
+                <p>CIN : U-62099-KA-2023-PTC-174648
+                    PAN: AABCY6908P
+                    TAN : BLRY02955B</p>
+
+
+                <p>Startup India - DP - IIT: DIPP- 138 388 MSME Udyog Aadhaar : UDYAM-KR-03-0293956</p>
+
+
+            </div>
+            <div class="secondline">
+
+            </div>
+        </div>
+        <div class="fright">
+            <div class="contact">
+                <h3>Contact</h3>
+            </div>
+            <div class="contacticon">
+                <p><i class="fa-solid fa-phone"></i> +91 9403890108</p>
+                <p><i class="fa-solid fa-envelope"></i> support@yellowsense.in</p>
+                <p><i class="fa-solid fa-location-dot"></i> Bangalore</p>
+            </div>
+            <div class="icons">
+                <p><i class="fa-brands fa-linkedin-in"></i></p>
+                <p><i class="fa-brands fa-facebook-f"></i></p>
+                <p><i class="fa-brands fa-twitter"></i></p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="rights">
+        <div class="con">
+            <p>All Rights Reserved @ Yellow Sense Technologies Pvt Ltd</p>
+        </div>
+    </div> -->
+
+
+
+    <div id="footer"></div>
+    </div>
+
+
+    <script>
+        $(document).ready(
+            function () {
+                $("#header").load("header.html");
+                $("#footer").load("footer.html");
+            }
+        );
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 100, // Number of particles
+                },
+                color: {
+                    value: "#8B4513", // Particle color (brown)
+                },
+                shape: {
+                    type: "circle", // Shape of particles (circle, edge, triangle, polygon, star, etc.)
+                },
+                opacity: {
+                    value: 0.5, // Opacity of particles
+                    random: true,
+                },
+                size: {
+                    value: 3, // Size of particles
+                    random: true,
+                },
+                move: {
+                    enable: true,
+                    speed: 2, // Speed of particles
+                    direction: "none", // Direction: "none", "top", "top-right", "right", "bottom-right", "bottom", "bottom-left", "left", "top-left"
+                    out_mode: "out",
+                },
+                line_linked: {
+                    enable: true,
+                    color: "#8B4513", // Change to brown color (hex code for brown) for path connections
+                    opacity: 1, // Opacity of path connections
+                },
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab", // Interaction mode on hover: "grab", "bubble", "repulse", etc.
+                    },
+                },
+            },
+        });
+    </script>
+
+
+
+</body>
+
+</html>
